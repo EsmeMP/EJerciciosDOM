@@ -1,18 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .div{
+            position: fixed;
+            background: #FFF;
+            width: 100px;
+            height: 100px;
+            border: 10px solid black;
+            /* box-shadow: 10px 0px rgb(201, 22, 22); */
+        }
+        /* eje x, eje y, saturacion grosor */
+    </style>
 </head>
 <body>
     <h1>Figura</h1>
-    <input type="color" id="btnColor">
-    <input type="range" id="btnTamaño">
-    <input type="range" id="btnBorde">
-    <input type="range" id="btnBordeRad">
-    <input type="range" id="btnOpacidad">
-    <script class="./figura.html"></script>
-    <div id="figura"></div>
+    Color: <input type="color" id="btnColor" oninput="ajuste()" value="#ffffff">
+    Tamaño: <input type="range" id="btnTamaño" max="500" min="0" oninput="ajuste()";>
+    Borde: <input type="range" id="btnBorde" max="100" min="0" oninput="ajuste()";>
+    Color de Borde: <input type="color" id="colorBorde" max="100" min="0" oninput="ajuste()";>
+    Borde Radious: <input type="range" id="btnBordeRad" max="100" min="0" oninput="ajuste()";>
+    <br>
+
+    Eje x (Izquierda-Derecha): <input type="range" name="" id="ejeX" min="-100" max="100" oninput="ajuste()">
+    Eje y (Arriba-Abajo): <input type="range" name="" id="ejeY" min="-100" max="100" oninput="ajuste()">
+
+    Opacidad: <input type="range" id="btnOpacidad" max="1000" min="100" oninput="ajuste()";>
+    Grosor de la Sombra <input type="range" name="" id="btnGrosor" oninput="ajuste()">
+    Color de Sombra: <input type="color" name="" id="colorSombra" oninput="ajuste()">
+
+
+
+    <div id="figura" class="div"></div>
+    <script src="./figura.js" defer></script>
 </body>
 </html>
+
+
+
+<!--
+Alternativas
+    oninput = detectar cambios en tiempo real
+    onchange = una vez confirmado el cambio
+    onclick = cuando se hace un click no importa si no hay cmanbios en los
+-->

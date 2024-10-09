@@ -1,34 +1,31 @@
+function ajuste() {
 const div = document.querySelector('div');
-const btnColor = document.getElementById('btnColor');
-const btnTamaño = document.getElementById('btnTamaño');
-const btnBorde = document.getElementById('btnBorde');
-const btnBordeRad = document.getElementById('btnBordeRad');
-const btnOpacidad = document.getElementById('btnOpacidad');
+const btnColor = document.getElementById('btnColor').value;
+const btnTamaño = document.getElementById('btnTamaño').value;
+const btnBorde = document.getElementById('btnBorde').value;
+const colorBorde = document.getElementById('colorBorde').value;
+const btnBordeRad = document.getElementById('btnBordeRad').value;
 
-const changeColor =() => {
-    let colores;
-    div.style.background = colores;
-}
-btnColor.addEventListener('clik', changeColor)
+const ejeX = document.getElementById('ejeX').value;
+const ejeY = document.getElementById('ejeY').value;
+const btnOpacidad = document.getElementById('btnOpacidad').value;
+const btnGrosor = document.getElementById('btnGrosor').value;
+const colorSombra = document.getElementById('colorSombra').value;
 
-const changeSize = () => {
-    let size;
-    div.style.width = size;
-}
-btnTamaño.addEventListener('click', changeSize);
+document.getElementById('figura').style.backgroundColor = btnColor;
 
-const changeBorde = () => {
-    let borde;
-    div.style.border = borde;
+document.getElementById('figura').style.width = btnTamaño + "px";
+
+document.getElementById('figura').style.height = btnTamaño + "px";
+
+document.getElementById('figura').style.border = colorBorde
+document.getElementById('figura').style.border = btnBorde + "px" + " " + "solid" + " " + colorBorde;
+
+document.getElementById('figura').style.borderRadius = btnBordeRad + "px"
+
+document.getElementById('figura').style.boxShadow = ejeX + "px" + " " + ejeY + "px" + " " + btnOpacidad + "px" + " " + btnGrosor + "px" + " " + colorSombra
+
 }
-btnBordeRad.addEventListener('click', changeBorde);
-const changeBorderRad = () => {
-    let bordRadius;
-    div.style.borderRadius = bordRadius;
-}
-btnBordeRad.addEventListener('click', changeBorderRad);
-const changeOpacity = () => {
-    let opacit;
-    div.style.opacity = opacit;
-}
-btnBordeRad.addEventListener('click', changeOpacity);
+
+
+/* box-shadow: 5px 5px 1000px 100px rgb(201, 22, 22); */
