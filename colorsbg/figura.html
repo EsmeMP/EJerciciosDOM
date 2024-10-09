@@ -5,36 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .div{
-            position: fixed;
-            background: #FFF;
-            width: 100px;
-            height: 100px;
-            border: 10px solid black;
-            /* box-shadow: 10px 0px rgb(201, 22, 22); */
+        body{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #23272A;
         }
-        /* eje x, eje y, saturacion grosor */
+        .controles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #2C2F33;
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+        }
+
+        #figura {
+            width: 200px;
+            height: 200px;
+            background-color: #ffffff;
+            margin-left: 300px;
+            margin-top: 100px;
+            border: 5px solid #000000;
+            border-radius: 0px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .contenedor-figura{
+            grid-area: 2 / 3 / 4 / 4;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #23272A;
+        }
     </style>
 </head>
 <body>
-    <h1>Figura</h1>
-    Color: <input type="color" id="btnColor" oninput="ajuste()" value="#ffffff">
-    Tamaño: <input type="range" id="btnTamaño" max="500" min="0" oninput="ajuste()";>
-    Borde: <input type="range" id="btnBorde" max="100" min="0" oninput="ajuste()";>
-    Color de Borde: <input type="color" id="colorBorde" max="100" min="0" oninput="ajuste()";>
-    Borde Radious: <input type="range" id="btnBordeRad" max="100" min="0" oninput="ajuste()";>
-    <br>
-
-    Eje x (Izquierda-Derecha): <input type="range" name="" id="ejeX" min="-100" max="100" oninput="ajuste()">
-    Eje y (Arriba-Abajo): <input type="range" name="" id="ejeY" min="-100" max="100" oninput="ajuste()">
-
-    Opacidad: <input type="range" id="btnOpacidad" max="1000" min="100" oninput="ajuste()";>
-    Grosor de la Sombra <input type="range" name="" id="btnGrosor" oninput="ajuste()">
-    Color de Sombra: <input type="color" name="" id="colorSombra" oninput="ajuste()">
-
-
-
-    <div id="figura" class="div"></div>
+    <div class="controles">
+        <h1>Figura</h1>
+        <h2>Color: <input type="color" id="btnColor" oninput="ajuste()" value="#ffffff"></h2>
+        <h2>Tamaño: <input type="range" id="btnTamaño" max="500" min="0" oninput="ajuste()";></h2>
+        <h2>Borde: <input type="range" id="btnBorde" max="100" min="0" oninput="ajuste()";></h2>
+        <h2>Color de Borde: <input type="color" id="colorBorde" max="100" min="0" oninput="ajuste()";></h2>
+        <h2>Borde Radious: <input type="range" id="btnBordeRad" max="100" min="0" oninput="ajuste()";></h2>
+        <h2>Eje x (Izquierda-Derecha): <input type="range" name="" id="ejeX" min="-100" max="100" oninput="ajuste()"></h2>
+        <h2>Eje y (Arriba-Abajo): <input type="range" name="" id="ejeY" min="-100" max="100" oninput="ajuste()"></h2>
+        <h2>Opacidad: <input type="range" id="btnOpacidad" max="1000" min="100" oninput="ajuste()";></h2>
+        <h2>Grosor de la Sombra <input type="range" name="" id="btnGrosor" oninput="ajuste()"></h2>
+        <h2>Color de Sombra: <input type="color" name="" id="colorSombra" oninput="ajuste()"></h2>
+    </div>
+    <div class="contenedor-figura">
+        <div id="figura" class="div"></div>
+    </div>
     <script src="./figura.js" defer></script>
 </body>
 </html>

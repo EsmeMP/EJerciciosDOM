@@ -32,6 +32,8 @@
 
 const body = document.querySelector('body');
 const btnChange = document.getElementById('btnchange');
+const texto = document.getElementById('texto')
+
 
 const changeColor = () => {
     let rgba = "("
@@ -52,6 +54,7 @@ const changeColor = () => {
     rgba += ")";
     console.log(rgba);
     body.style.backgroundColor = "rgba" + rgba;
+    texto.innerText = "rgba" + rgba;
 }
 // changeColor();
 btnChange.addEventListener('click', changeColor);

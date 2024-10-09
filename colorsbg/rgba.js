@@ -11,10 +11,11 @@ const inputs = document.getElementById('inputs');
 
 const color = "rgba(" + btnRojo + ", " + btnVerde + ", " + btnAzul + ", " + btnOpacidad + ")";
 // document.querySelector('body').style.backgroundColor = color;
-const colorhsl = "hsl(" + btnhsl + ", " + "50%, " + "50%)"
+const colorhsl = "hsl(" + btnhsl + ", " + "30%, " + "80%)"
 body.style.backgroundColor = color;
 inputs.style.backgroundColor= colorhsl;
 console.log(colorhsl)
+console.log(color)
 
 }
 

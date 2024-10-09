@@ -12,9 +12,38 @@
             place-items:center ;
             background-color: rgba(rgba(0, 0, 0, 0.229));
         }
+        body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: rgba(0, 0, 0, 0.229);
+    margin: 0;
+    padding: 0;
+}
+
+#btnchange {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ce1eff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#btnchange:hover {
+    background-color: #d597f7;
+    color: #000;
+}
+
     </style>
 </head>
 <body>
+    <h2 id="texto"></h2>
     <button id="btnchange">Cambiar Color</button>
     <script src="./app.js"></script>
 </body>
