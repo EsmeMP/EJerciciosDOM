@@ -1,0 +1,142 @@
+
+.alert{
+    width: 100%;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    text-align: center;
+    /* margin-left: 50px; */
+    font-family: "Dancing Script", cursive;
+}
+
+.alert button {
+    background-color: #f7f8fd;
+    padding: 2px;
+    border-radius: 5px;
+    border: #000 solid 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.red{
+    border: 2px solid rgb(242, 125, 125);
+    background-color: rgb(252, 210, 209);
+}
+
+.yellow{
+    border: 2px solid rgb(230, 226, 0);
+    background-color: rgb(247, 242, 185);
+}
+
+
+.green{
+    border: 2px solid rgba(82, 163, 0, 0.798);
+    background-color: rgb(220, 245, 206);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 248, 243);
+}
+
+#inputtarea {
+    width: 15%;
+    height: 200px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    textarea {
+        width: 210px !important;
+        height: 180px !important;
+        padding: 10px;
+        font-size: 18px;
+        box-sizing: border-box;
+        resize: none;
+        font-family: 'Courier New', Courier, monospace;
+        border-radius: 0 0 20px 20px;
+        border: solid black 3px;
+        font-family: "Dancing Script", sans-serif;
+        background: repeating-linear-gradient(
+        to bottom, rgb(240, 237, 230),rgb(241, 235, 223), 25px,   black 25px, black 26px
+    );
+    }
+
+    textarea::placeholder {
+        font-family: "Dancing Script", sans-serif;
+        font-size: 1rem;
+        color: #888;
+    }
+
+    .encabezado {
+        width: 206px;
+        height: 30px;
+        border: solid black 2px;
+        background: #000;
+        margin-left:40%;
+    }
+
+    .encabezado button {
+        margin-left: 135px;
+        border: solid 0px #000;
+        background: #fffbfb;
+        color: rgb(65, 67, 68);
+        padding: 5px;
+        border-radius: 5px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .container h1{
+        font-family: "Dancing Script", cursive;
+        font-size: 4rem;
+        margin: 0;
+        padding: 20px 350px;
+        border-radius: 15px;
+        background: #e0d5d595;
+        margin-bottom: 50px;
+        color: #000;
+    }
+
+    .container {
+        grid-area: 1 / 3 / 2 / 4;
+    }
+
+    .tareas p{
+        width: 290px !important;
+        margin: 0;
+    }
+    .tareas button {
+        height: 20px;
+    }
+
+
+    .tareas .alert {
+        flex: 1 1 auto;
+        min-width: 210px;
+        max-width: 60;
+    }
+
+    #form{
+        text-align: center;
+    }
+
+    .contenedor-imagen{
+        position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('../assets/img/pexels-iriser-1334118.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(30px) sepia(50%) opacity(70%);
+            z-index: -1;
+            min-height: 100vh;
+    }
+
