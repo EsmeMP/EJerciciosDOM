@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dibujo con Canvas</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vh;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+
+        .div{
+            background-image: url('../../assets/img/happytf.jpg');
+            width: 550px;
+            height: 400px;
+            /* filter: blur(2px); */
+            position: fixed;
+            /* top: 250px; */
+            bottom: 500px;
+            left: 90px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+        #lienzo{
+            background-color: rgba(240, 248, 255, 0.332);
+        }
+    </style>
+</head>
+<body>
+    <div class="div"></div>
+    <div class="container">
+        <h1>Mi Dibujo con Canvas y JS</h1>
+        <canvas id="lienzo" width="600" height="400"></canvas>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
