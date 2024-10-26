@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dibujo con Canvas y Animacion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&
+family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <title>Cuadrado en Crecimiento</title>
     <style>
         body{
             margin: 0;
@@ -14,9 +18,14 @@
             height: 100vh;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
-            background-color: black;
+            background-color: #E5D9F2;
             color: white;
-        }
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            }
 
         /* .div{ */
             /* background-image: url('../../assets/img/happytf.jpg'); */
@@ -33,12 +42,40 @@
         #lienzo{
             background-color: rgba(240, 248, 255, 0.332);
         }
+
+        a{
+            font-size: 3rem;
+            text-decoration: none;
+            color: #A594F9;
+        }
+        .div1 {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        .div2 {
+            grid-area: 1 / 5 / 2 / 6;
+            text-align: end;
+        }
+        h1{
+            grid-area: 1 / 3 / 2 / 4;
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+            color: #937ef7;
+            font-size: 3rem;
+        }
+        .container{
+            grid-area: 3 / 3 / 4 / 4;
+        }
     </style>
 </head>
 <body>
-    <div class="div"></div>
+    <div class="div1">
+        <a href="../animado/circle.html">↜↜↜</a>
+    </div>
+    <div class="div2">
+        <a href="../rebota/index.html">↝↝↝</a>
+    </div>
+    <!-- <div class="div"></div> -->
+    <h1>Animación de Cuadrado en Crecimiento</h1>
     <div class="container">
-        <h1>Mi Dibujo con Canvas y JS</h1>
         <canvas id="lienzo" width="600" height="400"></canvas>
     </div>
     <script src="square.js"></script>

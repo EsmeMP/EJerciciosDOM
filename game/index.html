@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de la Serpiente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&display=swap" 
+    rel="stylesheet">
     <style>
         body{
             margin: 0;
@@ -12,22 +16,99 @@
             place-items: center;
             width: 100vw;
             height: 100vh;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
-            background-color: black;
+            background-color:#030f25;
             color: white;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin: 0;
         }
 
+        h1{
+            /* background-color: blue; */
+            color: rgba(240, 248, 255, 0.596);
+            grid-area: 1 / 3 / 2 / 4;
+            font-size: 3rem;
+        }
         #lienzo{
-            background-color: rgba(240, 248, 255, 0.332);
+            background-color: rgba(240, 248, 255, 0.305);
+        }
+        .modal {
+            display: none;
+            position: absolute;
+            top: 55%;
+            left: 46%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.497);
+            color: white;
+            padding: 10px 35px;
+            text-align: center;
+            border-radius: 10px;
+            z-index: 10;
+        }
+
+        #reiniciar {
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #reiniciar:hover {
+            background-color: #B8001F;
+        }
+
+        a{
+            font-size:2rem;
+            text-decoration: none;
+            color: rgba(240, 248, 255, 0.596);
+        }
+        .div1 {
+            grid-area: 1 / 1 / 1 / 2;
+        }
+        .div2 {
+        grid-area: 1 / 6 / 2 / 7;
+        text-align: end;
+        margin-right: 30px;
+        }
+        .container{
+            grid-area: 3 / 3 / 4 / 4;
+        }
+        h2{
+            color: #ff395a;
+            font-weight: bold;
+        }
+        #puntajeFinal, #puntaje{
+            color: #ff395a;
         }
     </style>
 </head>
 <body>
-    <div class="div"></div>
+    <div class="div1">
+        <a href="../rebota/index.html">↜↜↜</a>
+    </div>
+    <div class="div2">
+        <a href="../index.html">↝↝↝</a>
+    </div>
+    <h1>Juego de la Serpiente</h1>
     <div class="container">
-        <h1>Juego de la Serpiente</h1>
+        <div>Puntaje Actual: <span id="puntaje">0</span></div>
+        <div>Máximo Record: <span id="recordMax">0</span></div>
         <canvas id="lienzo" width="600" height="400"></canvas>
+        <div id="modal" class="modal">
+            <h2>¡Perdiste!</h2>
+            <p>¡Qué Bien!</p>
+            <p>El robot chocó</p>
+            <p id="puntajeFinal">Puntaje final: 0</p>
+            <p id="recordMaxModal">Máximo Record: 0</p>
+            <button id="reiniciar">Jugar</button>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

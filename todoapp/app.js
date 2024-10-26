@@ -72,8 +72,6 @@ const creaObjeto = (tarea) => {
     return div;
 }
 
-
-
 myForm.addEventListener('submit', e => {
     e.preventDefault();
     addTarea();

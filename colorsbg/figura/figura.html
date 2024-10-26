@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&
+family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <title>Figura</title>
     <style>
         body{
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(5, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
-            margin: 0;
             font-family: Arial, sans-serif;
             background-color: #23272A;
         }
@@ -21,8 +19,8 @@
             left: 0;
             width: 250px;
             height: 100%;
-            background-color: #2C2F33;
-            color: white;
+            background-color: #D8D9DA;
+            color: #61677A;
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
             overflow-y: auto;
@@ -46,11 +44,38 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #23272A;
+            background-color: #F3F3E0;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 80%;
+        }
+
+        a{
+            font-size: 3rem;
+            text-decoration: none;
+            color: #61677A;
+        }
+        .div1 {
+            grid-area: 1 / 3 / 2 / 3;
+        }
+        .div2 {
+            grid-area: 1 / 6 / 2 / 7;
+            text-align: end;
+            margin-right: 50px;
         }
     </style>
 </head>
 <body>
+    <div class="div1">
+        <a href="../rgba&hsl/rgba.html">↜↜↜</a>
+    </div>
+    <div class="div2">
+        <a href="../../todoapp/index.html">↝↝↝</a>
+    </div>
     <div class="controles">
         <h1>Figura</h1>
         <h2>Color: <input type="color" id="btnColor" oninput="ajuste()" value="#ffffff"></h2>

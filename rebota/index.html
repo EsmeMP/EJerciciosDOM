@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&
+family=Merienda:wght@300..900&display=swap" rel="stylesheet">
     <title>Bolita que rebota</title>
     <style>
         body{
@@ -14,19 +18,49 @@
             height: 100vh;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             text-align: center;
-            background-color: black;
+            background-color: #F6FCDF;
             color: white;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin: 0;
         }
 
-        #lienzo{
-            background-color: rgba(240, 248, 255, 0.332);
+        a{
+            font-size: 3rem;
+            text-decoration: none;
+            color: #1A1A19;
         }
-    </style>
+        .div2 {
+            grid-area: 1 / 6 / 2 / 7;
+            text-align: end;
+            margin-right: 30px;
+        }
+        h1{
+            grid-area: 1 / 3 / 2 / 4;
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 3rem;
+            color: #1A1A19;
+        }
+        .container{
+            grid-area: 3 / 3 / 4 / 4;
+            background-color: #e1efb9;
+            border-radius: 10px;
+        }
+        </style>
 </head>
 <body>
-    <div class="div"></div>
+    <div class="div1">
+        <a href="../animado/index.html">↜↜↜</a>
+    </div>
+    <div class="div2">
+        <a href="../game/index.html">↝↝↝</a>
+    </div>
+    <h1>Bolita que Rebota</h1>
+    <!-- <div class="div"></div> -->
     <div class="container">
-        <h1>Bolita que Rebota</h1>
         <canvas id="lienzo" width="600" height="400"></canvas>
     </div>
     <script src="app.js"></script>

@@ -81,7 +81,7 @@ setInterval(() => {
     //validar x para cambiar rigth
     //validar y para cambiar down
     if(right){
-        x -= 3;
+        x -= 6;
     }else{
         x += 3;
     }if(down){

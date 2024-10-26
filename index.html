@@ -3,9 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicios DOM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        
+        body{
+            background-color: #FDE2F3;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            background-image: url(./assets/img/fondo.jpeg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        div {
+            background-color: #917fb3be;
+            width: 130px;
+            height: 80px;
+            padding: 20%;
+            margin: 15px;
+            border-radius: 10px;
+            color: #2A2F4F;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        div:hover{
+            background-color: #FDE2F3;
+        }
+        a{
+            text-decoration: none;
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .div1 { grid-area: 2 / 2 / 3 / 3; }
+        .div2 { grid-area: 2 / 3 / 3 / 4; }
+        .div3 { grid-area: 2 / 4 / 3 / 5; }
+        .div4 { grid-area: 2 / 5 / 3 / 6; }
+        .div5 { grid-area: 3 / 2 / 4 / 3; }
+        .div6 { grid-area: 3 / 3 / 4 / 4; }
+        .div7 { grid-area: 3 / 4 / 4 / 5; }
+        .div8 { grid-area: 3 / 5 / 4 / 6; }
+        
+
+
+        h1{
+            background: #FDE2F3;
+            border-radius: 30px;
+            font-size: 2rem;
+            grid-area: 1 / 3 / 2 / 5;
+            text-align: center;
+            padding: 10%;
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+            color: #2A2F4F;
+            font-weight: 800;
+        
+        }
+    </style>
 </head>
 <body>
     <h1>Ejercicios del DOM en JS</h1>
+    <div class="div1">
+        <a href="./colorsbg/rgba&hsl/rgba.html">~~~RGBA && HSL en HTML~~~<br>🎨</a>
+    </div>
+    <div class="div2">
+        <a href="./colorsbg/figura/figura.html">~~~Figura Moldeable~~~<br>🔴</a>
+    </div>
+    <div class="div3">
+        <a href="./todoapp/index.html">~~~App de Tareas~~~<br>🗒</a>
+    </div>
+    <div class="div4">
+        <a href="./colorsbg/dibujojs/index.html">~~~Dibujo~~~<br>👻</a>
+    </div>
+    <div class="div5">
+        <a href="./animado/circle.html">~~~Circulo en Crecimiento~~~<br>⚪</a>
+    </div>
+    <div class="div6">
+        <a href="./animado/index.html">~~~Animacion de Crecimiento~~~<br>🪐</a>
+    </div>
+    <div class="div7">
+        <a href="./rebota/index.html">~~~Pelotita que Rebota~~~<br>⚾</a>
+    </div>
+    <div class="div8">
+        <a href="./game/index.html">~~~Snake Game~~~<br>🎮</a>
+    </div>
 </body>
 </html>

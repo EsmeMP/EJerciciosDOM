@@ -43,7 +43,18 @@ body {
     align-items: center;
     justify-content: center;
     background-color: rgb(255, 248, 243);
-}
+    /* display: grid; */
+    /* grid-template-columns: repeat(5, 1fr); */
+    /* grid-template-rows: repeat(5, 1fr); */
+    /* grid-column-gap: 0px; */
+    /* grid-row-gap: 0px; */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0;
+    }
 
 #inputtarea {
     width: 15%;
@@ -75,11 +86,11 @@ body {
     }
 
     .encabezado {
-        width: 206px;
+        width: 210px;
         height: 30px;
         border: solid black 2px;
         background: #000;
-        margin-left:40%;
+        margin-left:37%;
     }
 
     .encabezado button {
@@ -94,7 +105,7 @@ body {
 
     .container h1{
         font-family: "Dancing Script", cursive;
-        font-size: 4rem;
+        font-size: 3rem;
         margin: 0;
         padding: 20px 350px;
         border-radius: 15px;
@@ -132,11 +143,24 @@ body {
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url('../assets/img/pexels-iriser-1334118.jpg');
+            background-image: url('../assets/img/pexels-pixabay-262367.jpg');
             background-size: cover;
             background-position: center;
-            filter: blur(30px) sepia(50%) opacity(70%);
+            filter: blur(10px) sepia(10%) opacity(100%);
             z-index: -1;
             min-height: 100vh;
+    }
+
+    a{
+        font-size: 3rem;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .div1 {
+        grid-area: 1 / 1 / 2 / 3;
+    }
+    .div2 {
+        grid-area: 1 / 6 / 2 / 7;
+        text-align: end;
     }
 

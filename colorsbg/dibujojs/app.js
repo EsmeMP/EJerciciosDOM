@@ -278,8 +278,8 @@ ctx.rotate(Math.PI / 6.2);
 ctx.fillStyle = 'white';
 ctx.fillRect(-14 / 2, -16 / 2, 10, 17);
 
-ctx.strokeStyle = 'black'; // Color del contorno
-ctx.lineWidth = 1; // Grosor del contorno (ajustable)
+ctx.strokeStyle = 'black';
+ctx.lineWidth = 1;
 ctx.strokeRect(-14 / 2, -16 / 2, 10, 17);
 ctx.restore();
 
@@ -291,8 +291,8 @@ ctx.rotate(Math.PI / 6.2);
 ctx.fillStyle = 'white';
 ctx.fillRect(-14 / 2, -12 / 2, 10, 17);
 
-ctx.strokeStyle = 'black'; // Color del contorno
-ctx.lineWidth = 1; // Grosor del contorno (ajustable)
+ctx.strokeStyle = 'black';
+ctx.lineWidth = 1;
 ctx.strokeRect(-14 / 2, -12 / 2, 10, 17);
 ctx.restore();
 
@@ -337,7 +337,7 @@ ctx.stroke();
 ctx.beginPath();
 ctx.roundRect(280, 145, 18, 15, [30, 100, 20, 100]);
 ctx.fill();
-ctx.stroke(); // Contorno de la forma
+ctx.stroke();
 
 ctx.beginPath();
 ctx.roundRect(295, 145, 18, 15, [29, 5, 30, 0]);

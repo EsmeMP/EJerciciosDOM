@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&
+family=Merienda:wght@300..900&display=swap" rel="stylesheet">
     <title>Dibujo con Canvas</title>
     <style>
         body{
@@ -16,30 +20,63 @@
             text-align: center;
             background-color: black;
             color: white;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
         }
 
-        .div{
-            background-image: url('../../assets/img/happytf.jpg');
-            width: 550px;
-            height: 400px;
-            /* filter: blur(2px); */
-            position: fixed;
-            /* top: 250px; */
-            bottom: 500px;
-            left: 90px;
-            background-size: cover;
-            background-repeat: no-repeat;
-            z-index: -1;
-        }
         #lienzo{
             background-color: rgba(240, 248, 255, 0.332);
+        }
+
+        .div img{
+            width: 90%;
+        }
+        .div{
+            grid-area: 3 / 2 / 4 / 3;
+        }
+        a{
+            font-size: 3rem;
+            text-decoration: none;
+            color: #12cfcf;
+        }
+        .div1 {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        .div2 {
+            grid-area: 1 / 6 / 2 / 7;
+            text-align: end;
+        }
+        .titulo{
+            grid-area: 1 / 1 / 2 / 7;
+            width: 300px;
+        }
+        .titulo h1{
+            font-size: 3rem;
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+            color: #12cfcf;
+        }
+        .container{
+            grid-area: 3 / 5 / 4 / 6;
         }
     </style>
 </head>
 <body>
-    <div class="div"></div>
-    <div class="container">
+    <div class="div1">
+        <a href="../../todoapp/index.html">↜↜↜</a>
+    </div>
+    <div class="div2">
+        <a href="../../animado/circle.html">↝↝↝</a>
+    </div>
+    <div class="div">
+        <img src="../../assets/img/happytf.jpg" alt="htf">
+    </div>
+    <div class="titulo">
         <h1>Mi Dibujo con Canvas y JS</h1>
+    </div>
+    <div class="container">
         <canvas id="lienzo" width="600" height="400"></canvas>
     </div>
     <script src="./app.js"></script>

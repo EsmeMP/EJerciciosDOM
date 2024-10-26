@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&
+family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <title>Animacion de Círculo</title>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: rgba(0, 0, 0, 0.229);
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+        
+        #btnchange {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #ce1eff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        #btnchange:hover {
+            background-color: #d597f7;
+            color: #000;
+        }
+        
+        a{
+            font-size: 3rem;
+            text-decoration: none;
+            color: #ce1eff;
+        }
+        .div1 {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        .div2 {
+            grid-area: 1 / 6 / 2 / 7;
+            text-align: end;
+            padding-right: 50px;
+        }
+        h1{
+            grid-area: 1 / 3 / 2 / 4;
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+            color: #ce1eff;
+            font-size: 2rem;
+        }
+        h2{
+            grid-area: 4 / 3 / 5 / 4;
+            font-family: "Merienda", Verdana, Geneva, Tahoma, sans-serif;
+            color: #ce1eff;
+        }
+        .container{
+            grid-area: 3 / 3 / 4 / 4;
+        }
+        #lienzo{
+    background-color: rgba(240, 248, 255, 0.332);
+}
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <a href="../colorsbg/dibujojs/index.html">↜↜↜</a>
+    </div>
+    <div class="div2">
+        <a href="../animado/index.html">↝↝↝</a>
+    </div>
+    <h1>Animacion de Círculo en Canvas</h1>
+    <div class="container">
+        <canvas id="lienzo" width="600" height="400"></canvas>
+    </div>
+    <h2 id="texto"></h2>
+    <button id="btnchange">Cambiar Color</button>
+    <script src="../colorsbg/app.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
